@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   Copyright (c) 2014-2024 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Search/etc/search_request.xsd">
+    <request query="quick_search_container" index="catalogsearch_fulltext">
+        <queries>
+            <query xsi:type="boolQuery" name="quick_search_container">
+                <queryReference clause="must" ref="attribute_set_query"/>
+            </query>
+            <query xsi:type="filteredQuery" name="attribute_set_query">
+                <filterReference clause="must" ref="attribute_set_filter"/>
+            </query>
+        </queries>
+        <filters>
+            <filter xsi:type="termFilter" name="attribute_set_filter" field="attribute_set_id" value="$attribute_set_id$"/>
+        </filters>
+    </request>
+    <request query="advanced_search_container" index="catalogsearch_fulltext">
+        <queries>
+            <query xsi:type="boolQuery" name="advanced_search_container">
+                <queryReference clause="must" ref="attribute_set_query"/>
+            </query>
+            <query xsi:type="filteredQuery" name="attribute_set_query">
+                <filterReference clause="must" ref="attribute_set_filter"/>
+            </query>
+        </queries>
+        <filters>
+            <filter xsi:type="termFilter" name="attribute_set_filter" field="attribute_set_id" value="$attribute_set_id$"/>
+        </filters>
+    </request>
+    <request query="catalog_view_container" index="catalogsearch_fulltext">
+        <queries>
+            <query xsi:type="boolQuery" name="catalog_view_container">
+                <queryReference clause="must" ref="attribute_set_query"/>
+            </query>
+            <query xsi:type="filteredQuery" name="attribute_set_query">
+                <filterReference clause="must" ref="attribute_set_filter"/>
+            </query>
+        </queries>
+        <filters>
+            <filter xsi:type="termFilter" name="attribute_set_filter" field="attribute_set_id" value="$attribute_set_id$"/>
+        </filters>
+    </request>
+</requests>

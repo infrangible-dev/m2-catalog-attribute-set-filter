@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   2014-2024 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="additionalFieldsProviderForElasticsearch">
+        <arguments>
+            <argument name="fieldsProviders" xsi:type="array">
+                <item name="attribute_set" xsi:type="object">Infrangible\CatalogAttributeSetFilter\Model\AdvancedSearch\Adapter\DataMapper\AttributeSet</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="categoryFilterList" type="Magento\Catalog\Model\Layer\FilterList">
+        <arguments>
+            <argument name="filters" xsi:type="array">
+                <item name="attribute_set" xsi:type="string">Infrangible\CatalogAttributeSetFilter\Model\Layer\Filter\AttributeSet</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Catalog\Model\Layer\FilterList">
+        <plugin name="infrangible_catalogattributesetfilter" type="Infrangible\CatalogAttributeSetFilter\Plugin\Catalog\Model\Layer\FilterList"/>
+    </type>
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   Copyright (c) 2014-2024 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="infrangible_catalogattributesetfilter" translate="label" type="text" sortOrder="1050" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Catalog Attribute Set Filter</label>
+            <tab>infrangible</tab>
+            <resource>Infrangible_CatalogAttributeSetFilter::config_infrangible_catalogattributesetfilter</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="visible" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Visible</label>
+                    <source_model>Magento\LayeredNavigation\Model\Attribute\Source\FilterableOptions</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
