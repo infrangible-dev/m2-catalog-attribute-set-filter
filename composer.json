@@ -1,11 +1,17 @@
 {
     "name": "infrangible/m2-catalog-attribute-set-filter",
-    "description": "Infrangible Magento 2 Catalog Attribute Set Filter",
+    "description": "Adds an \"Attribute Set\" filter to layered navigation, so shoppers can narrow category and search results by product type as defined by your attribute sets.",
     "type": "magento2-module",
     "version": "1.0.1",
     "license": "MIT",
     "keywords": [
-        "Magento"
+        "Magento",
+        "Magento 2",
+        "Adobe Commerce",
+        "Layered navigation",
+        "Catalog",
+        "attribute set filter",
+        "filter by product type in layered navigation"
     ],
     "homepage": "https://github.com/infrangible-dev/m2-catalog-attribute-set-filter",
     "authors": [
